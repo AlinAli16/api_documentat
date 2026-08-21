@@ -1,13 +1,17 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightOpenAPI, { openAPISidebarGroups } from 'starlight-openapi';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://AlinAli16.github.io',
+	base: '/api_documentat',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'My API Docs (demo)',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			plugins: [starlightOpenAPI([{ base: 'api', schema: './src/schemas/openapi.yaml' }]),],
 			sidebar: [
 				{
 					label: 'Guides',
@@ -20,6 +24,7 @@ export default defineConfig({
 					label: 'Reference',
 					items: [{ autogenerate: { directory: 'reference' } }],
 				},
+				...openAPISidebarGroups,
 			],
 		}),
 	],
