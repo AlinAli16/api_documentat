@@ -13,25 +13,17 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/AlinAli16/api_documentat' }],
 			plugins: [starlightOpenAPI([{ base: 'api', schema: './src/schemas/openapi.yaml' }]),],
 			sidebar: [
-				{
-					label: 'My Docs',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-						
-				//...openAPISidebarGroups,
-
+									
 				// Создаем ОДИН общий родительский раздел
 				{
 					label: 'Документация API', // Название главного раздела в меню
 					collapsed: false,          // Можно сделать true, чтобы он был свернут
 					items: [
 					// Все группы от плагина автоматически развернутся ВНУТРИ этого раздела
-					{ label: 'Overview', slug: 'guides' }, 
-					{ label: 'Auth', slug: 'guides/auth' }, 
-					{ label: 'Quickstart', slug: 'guides/quickstart' }, 
+					{ label: 'Обзор API', slug: 'guides' }, 
+					{ label: 'Быстрый старт', slug: 'guides/quickstart' }, 
+					{ label: 'Авторизация', slug: 'guides/auth' }, 
+					
 						
 					...openAPISidebarGroups,				
 					
