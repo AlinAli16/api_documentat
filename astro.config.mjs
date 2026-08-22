@@ -6,7 +6,7 @@ import starlightOpenAPI, { openAPISidebarGroups } from 'starlight-openapi';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://AlinAli16.github.io',
-	//base: '/api_documentat',
+	base: '/api_documentat/',
 	integrations: [
 		starlight({
 			title: 'My API Docs (demo)',
@@ -29,22 +29,12 @@ export default defineConfig({
 					collapsed: false,          // Можно сделать true, чтобы он был свернут
 					items: [
 					// Все группы от плагина автоматически развернутся ВНУТРИ этого раздела
-					{
-						label: 'Overview',
-						// Заменяем autogenerate на прямую ссылку через slug
-						items: [{ label: 'Overview', slug: 'overview' }],
-					},
-
-					{
-						label: 'Quickstart',
-						items: [{ autogenerate: { directory: 'quickstart' } }],
-					},					
-						{
-						label: 'Authentication',
-						items: [{ autogenerate: { directory: 'authentication' } }],
-					},						
+					{ label: 'Overview', slug: 'guides' }, 
+					{ label: 'Auth', slug: 'guides/auth' }, 
+					{ label: 'Quickstart', slug: 'guides/quickstart' }, 
+						
+					...openAPISidebarGroups,				
 					
-					...openAPISidebarGroups, 
 					],
 				},				
 			],
