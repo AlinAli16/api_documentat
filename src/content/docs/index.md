@@ -1,6 +1,30 @@
 ---
-title: Overview API plugin
-description: Вводная статься с описанием API
+title: Документация User CRUD API
+description: Руководство по интеграции и работе с API управления пользователями.
+template: splash
+hero:
+  tagline: Управляйте учетными записями, авторизацией и интеграцией в одном месте.
+  image:
+    file: ../../assets/houston.webp 
+  actions:
+    - text: Быстрый старт
+      link: /api_documentat/guides/quickstart/
+      icon: right-arrow
+      variant: primary
+    - text: Спецификация API
+      link: /api_documentat/api/
+      icon: external
+      variant: minimal
 ---
 
-Добро пожаловать в документацию нашего API плагина
+## Описание проекта
+
+Добро пожаловать в справочник разработчика. Данный сервис предоставляет полный набор методов для создания, чтения, модификации и удаления (CRUD) учетных записей пользователей.
+
+### С чего начать?
+
+1. Изучите раздел **Quickstart** для выполнения первого запроса.
+
+2. Получите токен авторизации в разделе **Authentication**.
+
+3. Протестируйте эндпоинты через интерактивный справочник **API Reference**.
